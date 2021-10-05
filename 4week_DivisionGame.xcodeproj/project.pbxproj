@@ -14,6 +14,9 @@
 		747F18E3270B07A500D9BA65 /* _week_DivisionGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 747F18E1270B07A500D9BA65 /* _week_DivisionGame.xcdatamodeld */; };
 		747F18E5270B07A600D9BA65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 747F18E4270B07A600D9BA65 /* Assets.xcassets */; };
 		747F18E8270B07A600D9BA65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 747F18E6270B07A600D9BA65 /* LaunchScreen.storyboard */; };
+		747F18F1270B13E800D9BA65 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747F18F0270B13E800D9BA65 /* StartViewController.swift */; };
+		747F18F5270B22A300D9BA65 /* 뒤뚱뒤뚱.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 747F18F4270B22A300D9BA65 /* 뒤뚱뒤뚱.mp3 */; };
+		747F18F8270C347100D9BA65 /* finishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747F18F7270C347000D9BA65 /* finishViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		747F18E4270B07A600D9BA65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		747F18E7270B07A600D9BA65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		747F18E9270B07A600D9BA65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		747F18F0270B13E800D9BA65 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		747F18F4270B22A300D9BA65 /* 뒤뚱뒤뚱.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "뒤뚱뒤뚱.mp3"; path = "../../../../../../Downloads/뒤뚱뒤뚱.mp3"; sourceTree = "<group>"; };
+		747F18F7270C347000D9BA65 /* finishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finishViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		747F18D7270B07A500D9BA65 /* 4week_DivisionGame */ = {
 			isa = PBXGroup;
 			children = (
+				747F18F4270B22A300D9BA65 /* 뒤뚱뒤뚱.mp3 */,
 				747F18D8270B07A500D9BA65 /* AppDelegate.swift */,
 				747F18DA270B07A500D9BA65 /* SceneDelegate.swift */,
 				747F18DC270B07A500D9BA65 /* ViewController.swift */,
@@ -66,6 +73,8 @@
 				747F18E6270B07A600D9BA65 /* LaunchScreen.storyboard */,
 				747F18E9270B07A600D9BA65 /* Info.plist */,
 				747F18E1270B07A500D9BA65 /* _week_DivisionGame.xcdatamodeld */,
+				747F18F0270B13E800D9BA65 /* StartViewController.swift */,
+				747F18F7270C347000D9BA65 /* finishViewController.swift */,
 			);
 			path = 4week_DivisionGame;
 			sourceTree = "<group>";
@@ -127,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				747F18F5270B22A300D9BA65 /* 뒤뚱뒤뚱.mp3 in Resources */,
 				747F18E8270B07A600D9BA65 /* LaunchScreen.storyboard in Resources */,
 				747F18E5270B07A600D9BA65 /* Assets.xcassets in Resources */,
 				747F18E0270B07A500D9BA65 /* Main.storyboard in Resources */,
@@ -141,8 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				747F18E3270B07A500D9BA65 /* _week_DivisionGame.xcdatamodeld in Sources */,
+				747F18F8270C347100D9BA65 /* finishViewController.swift in Sources */,
 				747F18DD270B07A500D9BA65 /* ViewController.swift in Sources */,
 				747F18D9270B07A500D9BA65 /* AppDelegate.swift in Sources */,
+				747F18F1270B13E800D9BA65 /* StartViewController.swift in Sources */,
 				747F18DB270B07A500D9BA65 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
