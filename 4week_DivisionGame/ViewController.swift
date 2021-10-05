@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     var imageArrayCopy: [UIImage]!
     
     var countTimer: Timer?
-    var counter: Int = 11 // 60sec
+    var counter: Int = 60 // 60sec로 설정.
     
     var score: Int = 0 // 0점 시작.
     
@@ -69,7 +69,8 @@ class ViewController: UIViewController {
             }
             else { // 틀렸다면 최종 결과로 이동.(score 전달해야함.)
                 endEffect() // 음악 정지, 타이머 종료(메모리 해제)
-                let finishVC = (self.storyboard?.instantiateViewController(withIdentifier: "finishVC"))!
+                let finishVC = (self.storyboard?.instantiateViewController(withIdentifier: "FinishVC")) as! FinishViewController
+                finishVC.text = "\(String(score + (60 - counter)))점" // 점수 전달
                 self.navigationController?.pushViewController(finishVC, animated: true)
             }
         }
@@ -83,7 +84,8 @@ class ViewController: UIViewController {
             }
             else { // 틀렸다면 최종 결과로 이동.(점수 전달해야함.)
                 endEffect() // 음악 정지, 타이머 종료(메모리 해제)
-                let finishVC = (self.storyboard?.instantiateViewController(withIdentifier: "finishVC"))!
+                let finishVC = (self.storyboard?.instantiateViewController(withIdentifier: "FinishVC")) as! FinishViewController
+                finishVC.text = "\(String(score + (60 - counter)))점" // 점수 전달
                 self.navigationController?.pushViewController(finishVC, animated: true)
             }
         }
@@ -116,14 +118,15 @@ class ViewController: UIViewController {
     // MARK: - 타이머 텍스트 변경 함수.
     @objc func changeTimerText() {
         if counter != 0 {
-            let strCounter = String(format: "%02d", counter)
+            let strCounter = String(format: "%02d", counter) // 형변환 - https://gonslab.tistory.com/36
             timerUI.text = "00:\(strCounter)"
             counter -= 1
         } else {
             endEffect() // 음악 정지, 타이머 종료(메모리 해제)
             print("Timer End")
             // 최종 결과로 이동.(점수 전달해야함.)
-            let finishVC = (self.storyboard?.instantiateViewController(withIdentifier: "finishVC"))!
+            let finishVC = (self.storyboard?.instantiateViewController(withIdentifier: "FinishVC")) as! FinishViewController
+            finishVC.text = "\(String(score + (60 - counter)))점" // 점수 전달
             self.navigationController?.pushViewController(finishVC, animated: true)
         }
     }

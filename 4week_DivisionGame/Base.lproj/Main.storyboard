@@ -18,26 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciH-9S-hf2">
-                                <rect key="frame" x="147" y="446" width="121" height="48"/>
-                                <state key="normal" title="Start"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6i-Dk-zHs">
+                                <rect key="frame" x="153" y="435" width="108" height="80"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="ZXC-hx-9ik"/>
+                                    <constraint firstAttribute="width" constant="108" id="dDs-RW-BB7"/>
+                                </constraints>
+                                <state key="normal" title=" 시작하기">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                    <imageReference key="image" image="gamecontroller" catalog="system" symbolScale="large"/>
+                                </state>
                                 <connections>
-                                    <action selector="ClickStartButton:" destination="S4F-OW-6Tq" eventType="touchUpInside" id="tig-jI-p6b"/>
+                                    <action selector="ClickStartButton:" destination="S4F-OW-6Tq" eventType="touchUpInside" id="zlH-F9-fnC"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ILK-4o-Fck"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ciH-9S-hf2" firstAttribute="leading" secondItem="ILK-4o-Fck" secondAttribute="leading" constant="147" id="9MR-Rw-Fgy"/>
-                            <constraint firstItem="ciH-9S-hf2" firstAttribute="top" secondItem="ILK-4o-Fck" secondAttribute="top" constant="358" id="MJn-k0-UqC"/>
-                            <constraint firstItem="ILK-4o-Fck" firstAttribute="bottom" secondItem="ciH-9S-hf2" secondAttribute="bottom" constant="368" id="ewM-tS-WhI"/>
-                            <constraint firstItem="ILK-4o-Fck" firstAttribute="trailing" secondItem="ciH-9S-hf2" secondAttribute="trailing" constant="146" id="xV5-J9-p8B"/>
+                            <constraint firstItem="x6i-Dk-zHs" firstAttribute="centerX" secondItem="ILK-4o-Fck" secondAttribute="centerX" id="DT0-7c-kJW"/>
+                            <constraint firstItem="x6i-Dk-zHs" firstAttribute="centerY" secondItem="ILK-4o-Fck" secondAttribute="centerY" id="KYn-Rn-3nZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fu5-WT-itw"/>
                     <connections>
-                        <outlet property="StartButton" destination="ciH-9S-hf2" id="8b6-ut-UXR"/>
+                        <outlet property="startButton" destination="x6i-Dk-zHs" id="qxK-Qm-nfM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1A-EV-AzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -192,33 +198,72 @@
         <!--Finish View Controller-->
         <scene sceneID="YJ2-Qw-kGR">
             <objects>
-                <viewController storyboardIdentifier="finishVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yJ5-pB-SkF" customClass="finishViewController" customModule="_week_DivisionGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FinishVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yJ5-pB-SkF" customClass="FinishViewController" customModule="_week_DivisionGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MZX-SZ-4Ev">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최종 점수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUL-dM-Bp5">
-                                <rect key="frame" x="20" y="216" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TgE-0F-vXJ">
+                                <rect key="frame" x="20" y="224" width="114" height="76"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최종 점수는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpa-15-a1n">
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUL-dM-Bp5">
+                                        <rect key="frame" x="0.0" y="40" width="75.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljw-zD-XIL">
+                                <rect key="frame" x="369" y="44" width="25" height="24"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="questionmark.circle" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="questionMarkClick:" destination="yJ5-pB-SkF" eventType="touchUpInside" id="qRc-fD-a6F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4z-DY-NxR">
+                                <rect key="frame" x="153" y="531" width="108" height="80"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="ZVd-8w-HvJ"/>
+                                </constraints>
+                                <state key="normal" title=" 다시하기">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                    <imageReference key="image" image="arrow.uturn.backward.circle.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickReplayButton:" destination="yJ5-pB-SkF" eventType="touchUpInside" id="qID-n2-dka"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HNR-Cl-gnS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KUL-dM-Bp5" firstAttribute="leading" secondItem="HNR-Cl-gnS" secondAttribute="leading" constant="20" id="4dQ-7W-DHF"/>
-                            <constraint firstItem="KUL-dM-Bp5" firstAttribute="top" secondItem="HNR-Cl-gnS" secondAttribute="top" constant="172" id="ASQ-G6-zKi"/>
-                            <constraint firstItem="HNR-Cl-gnS" firstAttribute="trailing" secondItem="KUL-dM-Bp5" secondAttribute="trailing" constant="20" id="lFQ-Rq-Bz7"/>
+                            <constraint firstItem="HNR-Cl-gnS" firstAttribute="bottom" secondItem="U4z-DY-NxR" secondAttribute="bottom" constant="251" id="0KS-1k-9fF"/>
+                            <constraint firstItem="HNR-Cl-gnS" firstAttribute="trailing" secondItem="ljw-zD-XIL" secondAttribute="trailing" constant="20" id="0fS-4k-kMc"/>
+                            <constraint firstItem="ljw-zD-XIL" firstAttribute="top" secondItem="HNR-Cl-gnS" secondAttribute="top" id="5MO-lm-XZw"/>
+                            <constraint firstItem="TgE-0F-vXJ" firstAttribute="leading" secondItem="HNR-Cl-gnS" secondAttribute="leading" constant="20" id="7xY-0t-eY4"/>
+                            <constraint firstItem="HNR-Cl-gnS" firstAttribute="trailing" secondItem="U4z-DY-NxR" secondAttribute="trailing" constant="153" id="d1e-Uz-YUX"/>
+                            <constraint firstItem="U4z-DY-NxR" firstAttribute="leading" secondItem="HNR-Cl-gnS" secondAttribute="leading" constant="153" id="qVu-qJ-ci7"/>
+                            <constraint firstItem="TgE-0F-vXJ" firstAttribute="top" secondItem="HNR-Cl-gnS" secondAttribute="top" constant="180" id="sYq-3Z-Wvy"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="scoreLabel" destination="KUL-dM-Bp5" id="9MI-Ln-zSG"/>
+                        <outlet property="replayButton" destination="U4z-DY-NxR" id="fdu-Py-649"/>
+                        <outlet property="scoreLabel" destination="KUL-dM-Bp5" id="W3f-Az-mkf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEr-8w-cvJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2755" y="76"/>
+            <point key="canvasLocation" x="2753.6231884057975" y="75.669642857142847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OY3-fu-MD1">
@@ -240,16 +285,25 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.uturn.backward.circle.fill" catalog="system" width="128" height="121"/>
         <image name="arrowshape.turn.up.left.circle" catalog="system" width="128" height="121"/>
         <image name="arrowshape.turn.up.right.circle" catalog="system" width="128" height="121"/>
         <image name="blueSheep" width="486" height="519.5"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="gamecontroller" catalog="system" width="128" height="80"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <image name="redStar" width="528" height="551.5"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
