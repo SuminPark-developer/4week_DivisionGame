@@ -8,7 +8,8 @@
 import UIKit
 import AVFoundation
 
-var soundEffect: AVAudioPlayer?
+var backgroundSoundEffect: AVAudioPlayer?
+var buttonSoundEffect: AVAudioPlayer?
 
 class ViewController: UIViewController {
     var mode: String? // Easy Mode or Hard Mode
@@ -86,6 +87,10 @@ class ViewController: UIViewController {
         else if mode == "Hard" {
             checkSame("left", "Hard") // 기준과 클릭한 버튼이 동일한지 체크.
         }
+        // 버튼 클릭 효과음 추가
+        let url = Bundle.main.url(forResource: "buttonSound", withExtension: "wav")
+        buttonSoundEffect = try! AVAudioPlayer(contentsOf: url!)
+        buttonSoundEffect!.play()
     }
     
     // MARK: - 오른쪽 버튼 클릭 : 우측 하단
@@ -96,6 +101,10 @@ class ViewController: UIViewController {
         else if mode == "Hard" {
             checkSame("right", "Hard") // 기준과 클릭한 버튼이 동일한지 체크.
         }
+        // 버튼 클릭 효과음 추가
+        let url = Bundle.main.url(forResource: "buttonSound", withExtension: "wav")
+        buttonSoundEffect = try! AVAudioPlayer(contentsOf: url!)
+        buttonSoundEffect!.play()
     }
     
     // MARK: - 기준과 동일한 버튼을 눌렀는지 체크하는 함수.
@@ -256,9 +265,9 @@ class ViewController: UIViewController {
         let url = Bundle.main.url(forResource: "뒤뚱뒤뚱", withExtension: "mp3")
             if let url = url{
                 do {
-                    soundEffect = try AVAudioPlayer(contentsOf: url)
-                    soundEffect!.prepareToPlay()
-                    soundEffect!.play()
+                    backgroundSoundEffect = try AVAudioPlayer(contentsOf: url)
+                    backgroundSoundEffect!.prepareToPlay()
+                    backgroundSoundEffect!.play()
 
                 } catch let error {
                     print(error.localizedDescription)
@@ -276,7 +285,7 @@ class ViewController: UIViewController {
     
     // MARK: - 게임화면에서 벗어날 때 : 음악 정지, 타이머 종료(메모리 해제)
     func endEffect() {
-        soundEffect?.stop() // 음악 정지
+        backgroundSoundEffect?.stop() // 음악 정지
         countTimer?.invalidate() // 타이머 종료
         countTimer = nil // 타이머 메모리 해제
     }

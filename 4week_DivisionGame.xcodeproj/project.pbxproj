@@ -17,6 +17,7 @@
 		747F18F1270B13E800D9BA65 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747F18F0270B13E800D9BA65 /* StartViewController.swift */; };
 		747F18F5270B22A300D9BA65 /* 뒤뚱뒤뚱.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 747F18F4270B22A300D9BA65 /* 뒤뚱뒤뚱.mp3 */; };
 		747F1923270C869400D9BA65 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747F1922270C869400D9BA65 /* FinishViewController.swift */; };
+		74D30A54270DA4E300714E70 /* buttonSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74D30A53270DA4E300714E70 /* buttonSound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		747F18F0270B13E800D9BA65 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		747F18F4270B22A300D9BA65 /* 뒤뚱뒤뚱.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "뒤뚱뒤뚱.mp3"; path = "../../../../../../Downloads/뒤뚱뒤뚱.mp3"; sourceTree = "<group>"; };
 		747F1922270C869400D9BA65 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		74D30A53270DA4E300714E70 /* buttonSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = buttonSound.wav; path = ../../../../../../Downloads/buttonSound.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		747F18D7270B07A500D9BA65 /* 4week_DivisionGame */ = {
 			isa = PBXGroup;
 			children = (
+				74D30A53270DA4E300714E70 /* buttonSound.wav */,
 				747F18F4270B22A300D9BA65 /* 뒤뚱뒤뚱.mp3 */,
 				747F18D8270B07A500D9BA65 /* AppDelegate.swift */,
 				747F18DA270B07A500D9BA65 /* SceneDelegate.swift */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				747F18F5270B22A300D9BA65 /* 뒤뚱뒤뚱.mp3 in Resources */,
+				74D30A54270DA4E300714E70 /* buttonSound.wav in Resources */,
 				747F18E8270B07A600D9BA65 /* LaunchScreen.storyboard in Resources */,
 				747F18E5270B07A600D9BA65 /* Assets.xcassets in Resources */,
 				747F18E0270B07A500D9BA65 /* Main.storyboard in Resources */,

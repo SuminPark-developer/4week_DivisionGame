@@ -56,7 +56,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ILK-4o-Fck"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="f3E-kY-aEZ" firstAttribute="centerY" secondItem="ILK-4o-Fck" secondAttribute="centerY" id="8Dp-n8-mx6"/>
                             <constraint firstItem="f3E-kY-aEZ" firstAttribute="centerX" secondItem="ILK-4o-Fck" secondAttribute="centerX" id="HGw-T4-vtm"/>
@@ -104,13 +104,14 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlG-9o-pKN">
                                 <rect key="frame" x="20" y="782" width="80" height="80"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="BAP-Ye-Sq1"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="BGb-Bw-nxb"/>
                                     <constraint firstAttribute="height" constant="80" id="qZw-hn-hsG"/>
                                     <constraint firstAttribute="width" constant="80" id="wUI-G4-HXh"/>
                                 </constraints>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" image="arrowshape.turn.up.left.circle" catalog="system"/>
                                 <connections>
                                     <action selector="clickLeftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q0b-QX-LKZ"/>
@@ -118,13 +119,14 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7W-Wc-pam">
                                 <rect key="frame" x="314" y="782" width="80" height="80"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="d6N-XH-XFN"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="jAI-uR-DNb"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="pQ4-QX-3zi"/>
                                     <constraint firstAttribute="width" constant="80" id="uqd-Ks-kyB"/>
                                 </constraints>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" image="arrowshape.turn.up.right.circle" catalog="system"/>
                                 <connections>
                                     <action selector="clickRightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GJ2-mC-VFu"/>
@@ -179,7 +181,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="FLt-x7-nsi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2ME-zT-hlK"/>
                             <constraint firstItem="JbY-r3-wfF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="4B2-oS-R9l"/>
@@ -290,7 +292,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HNR-Cl-gnS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="HNR-Cl-gnS" firstAttribute="bottom" secondItem="U4z-DY-NxR" secondAttribute="bottom" constant="251" id="0KS-1k-9fF"/>
                             <constraint firstItem="HNR-Cl-gnS" firstAttribute="trailing" secondItem="ljw-zD-XIL" secondAttribute="trailing" constant="20" id="0fS-4k-kMc"/>
@@ -344,17 +346,20 @@
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
